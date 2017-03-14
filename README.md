@@ -1,6 +1,6 @@
 # LevelUp Watch Edition App Development Environment
 
-[![Build Status](https://circleci.com/gh/twlevelup/twlevelup-melb-2017-s1-jade.png)](https://circleci.com/gh/twlevelup/twlevelup-melb-2017-s1-jade)
+[![Build Status](https://circleci.com/gh/twlevelup/melb_2017s1_watch_jade.png)](https://circleci.com/gh/twlevelup/melb_2017s1_watch_jade)
 
 This git repo contains all the code you need to prototype apps for the Proto Watch.
 
@@ -33,6 +33,6 @@ To view the build status and get notifications about the build status:
 
 Add the following XML config to CCTray or CCMenu on your dev machine
 
-	https://circleci.com/gh/twlevelup/twlevelup-melb-2017-s1-jade.cc.xml
+	https://circleci.com/gh/twlevelup/melb_2017s1_watch_jade.cc.xml
 
-You can also access the CI server and view the status of the build here [Circle CI](https://circleci.com/gh/twlevelup/twlevelup-melb-2017-s1-jade)
+You can also access the CI server and view the status of the build here [Circle CI](https://circleci.com/gh/twlevelup/melb_2017s1_watch_jade)
