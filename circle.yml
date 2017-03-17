@@ -13,4 +13,4 @@ deployment:
   staging:
     branch: master
     heroku:
-      appname: twlevelup-melb-2017-s1-jade
+      appname: twlevelup-melb-2017s1-jade
