@@ -1,6 +1,6 @@
 # LevelUp Watch Edition App Development Environment
 
-[![Build Status](https://circleci.com/gh/twlevelup/melb_2017s1_watch_jade.png)](https://circleci.com/gh/twlevelup/melb_2017s1_watch_jade)
+[![Build Status](https://travis-ci.org/twlevelup/melb_2017s1_watch_jade.svg?branch=master)](https://travis-ci.org/twlevelup/melb_2017s1_watch_jade)
 
 This git repo contains all the code you need to prototype apps for the Proto Watch.
 
@@ -12,8 +12,9 @@ See the [Installation Instructions](https://github.com/twlevelup/watch_edition/w
 
 ## Continuous Integration
 
-This project is continuously deployed to heroku by [Circle CI](https://circleci.com).
-You can view this app at [https://twlevelup-melb-2017-s1-jade.herokuapp.com/](https://twlevelup-melb-2017-s1-jade.herokuapp.com/)
+This project is continuously deployed to heroku by [Travis CI](https://travis-ci.org).
+You can view this app at [https://twlevelup-melb-2017s1-jade.herokuapp.com/](https://twlevelup-melb-2017s1-jade.herokuapp.com/)
+
 
 ### Before you commit
 
@@ -33,6 +34,6 @@ To view the build status and get notifications about the build status:
 
 Add the following XML config to CCTray or CCMenu on your dev machine
 
-	https://circleci.com/gh/twlevelup/melb_2017s1_watch_jade.cc.xml
+	https://api.travis-ci.org/repos/twlevelup/melb_2017s1_watch_jade/cc.xml
 
-You can also access the CI server and view the status of the build here [Circle CI](https://circleci.com/gh/twlevelup/melb_2017s1_watch_jade)
+You can also access the CI server and view the status of the build here [Travis CI](https://travis-ci.org/twlevelup/melb_2017s1_watch_jade)
