@@ -13,6 +13,14 @@ describe('Check-in dance', () => {
       expect(page.$el).toContainText('Made by:');
     });
 
+    it('should include the text "Jonathan Ly"', () => {
+      expect(page.$el).toContainText('Jonathan Ly');
+    });
+
+    it('should include the text "Jaime Gunther"', () => {
+      expect(page.$el).toContainText('Jaime Gunther');
+    });
+
     it('should include the text "Nihal Mirpuri"', () => {
       expect(page.$el).toContainText('Nihal Mirpuri');
     });
