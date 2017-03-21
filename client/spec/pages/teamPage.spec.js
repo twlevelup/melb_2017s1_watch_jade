@@ -20,5 +20,13 @@ describe('Check-in dance', () => {
     it('should include the text "Jaime Gunther"', () => {
       expect(page.$el).toContainText('Jaime Gunther');
     });
+
+    it('should include the text "Nihal Mirpuri"', () => {
+      expect(page.$el).toContainText('Nihal Mirpuri');
+    });
+
+    it('should include the text "Roshan Krishnan"', () => {
+      expect(page.$el).toContainText('Roshan Krishnan');
+    });
   });
 });
