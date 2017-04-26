@@ -12,11 +12,11 @@ describe('The Home Page', () => {
   });
 
   describe('button event handlers', () => {
-    describe('right', () => {
+    describe('left', () => {
       it('should take the user to the contacts page', () => {
         spyOn(window.App, 'navigate');
         page.configureButtons();
-        eventHub.trigger('right');
+        eventHub.trigger('left');
         expect(window.App.navigate).toHaveBeenCalledWith('contacts');
       });
     });
