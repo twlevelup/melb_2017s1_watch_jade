@@ -10,7 +10,7 @@ const homePage = Page.extend({
   template,
 
   buttonEvents: {
-    right: 'goToContacts',
+    left: 'goToContacts',
     top: 'scrollUp',
     bottom: 'scrollDown',
   },
