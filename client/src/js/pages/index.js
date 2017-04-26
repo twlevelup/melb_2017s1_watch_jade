@@ -4,6 +4,7 @@ const home = require('./homePage');
 const contacts = require('./contactsPage');
 const eventsList = require('./eventsList');
 const eventDetails = require('./eventDetails');
+const medicalInfo = require('./medicalInfoPage');
 
 // TODO autogenerate this file
 module.exports = {
@@ -13,4 +14,5 @@ module.exports = {
   contacts,
   eventsList,
   eventDetails,
+  medicalInfo,
 };

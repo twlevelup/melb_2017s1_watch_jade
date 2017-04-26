@@ -50,4 +50,13 @@ describe('The Home Page', () => {
       expect(page.render()).toEqual(page);
     });
   });
+
+  describe('face', () => {
+    it('should navigate to medical info page', () => {
+      spyOn(window.App, 'navigate');
+      page.configureButtons();
+      eventHub.trigger('face');
+      expect(window.App.navigate).toHaveBeenCalledWith('medicalInfo');
+    });
+  });
 });

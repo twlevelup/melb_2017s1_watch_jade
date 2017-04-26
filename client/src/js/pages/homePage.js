@@ -13,6 +13,7 @@ const homePage = Page.extend({
     left: 'goToContacts',
     top: 'scrollUp',
     bottom: 'scrollDown',
+    face: 'goToMedicalInfo',
   },
 
   goToContacts() {
@@ -25,6 +26,10 @@ const homePage = Page.extend({
 
   scrollDown() {
     $('#watch-face').animate({ scrollTop: '+=70px' });
+  },
+
+  goToMedicalInfo() {
+    window.App.navigate('medicalInfo');
   },
 
   render() {
