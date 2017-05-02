@@ -1,10 +1,8 @@
 const Page = require('watch_framework').Page;
 
-const ContactsCollection = require('../collections/contacts');
 const ContactView = require('../views/contact');
 
 const template = require('../../templates/pages/contacts.hbs');
-const $ = require('jquery');
 
 const contactsPage = Page.extend({
 
@@ -13,44 +11,40 @@ const contactsPage = Page.extend({
   template,
 
   buttonEvents: {
-    right: 'goToHomePage',
-    face: 'screenClickExample',
-    left: 'back',
+    face: 'goToHomePage',
+    top: 'previousContact',
+    bottom: 'nextContact',
   },
 
   initialize() {
-    this.contactsCollection = new ContactsCollection();
-    this.seedContacts();
     this.render();
-  },
-
-  // TODO use jquery to load a JSON file async test?
-  seedContacts() {
-    this.contactsCollection.reset([
-      { name: 'Adam', phoneNumber: '0431 111 111' },
-      { name: 'James', phoneNumber: '0431 222 222' },
-      { name: 'Marzena', phoneNumber: '0431 333 333' },
-    ]);
-  },
-
-  screenClickExample() {
-    this.$el.html('<div>Oh noes!</div>');
   },
 
   goToHomePage() {
     window.App.navigate('');
   },
 
+  contactIndex: 0,
+
+  previousContact() {
+    this.contactIndex -= 1;
+    this.render();
+  },
+
+  nextContact() {
+    this.contactIndex += 1;
+    this.render();
+  },
+
   render() {
-    this.$el.html(this.template());
+    const allContacts = [
+      { name: 'Adam', phoneNumber: '0431 111 111' },
+      { name: 'James', phoneNumber: '0431 222 222' },
+      { name: 'Marzena', phoneNumber: '0431 333 333' },
+    ];
 
-    const contactsHTML = document.createDocumentFragment();
-
-    this.contactsCollection.each(function collectionFunction(contact) {
-      $(contactsHTML).append(this.createContactHTML(contact));
-    }, this);
-
-    this.$el.find('ul').html(contactsHTML);
+    const contact = allContacts[this.contactIndex];
+    this.$el.html(this.template({ name: contact.name, phoneNumber: contact.phoneNumber }));
 
     return this;
   },
