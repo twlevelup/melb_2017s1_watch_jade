@@ -17,5 +17,7 @@ describe('The Medical Information Page', () => {
     expect(page.$el).toContainText('Norman');
   });
 
-
+  it('should have Doctor\'s name as Dr Joe Smith', () => {
+    expect(page.$el).toContainText('Dr Joe Smith');
+  });
 });

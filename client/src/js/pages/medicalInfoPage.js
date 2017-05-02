@@ -11,7 +11,8 @@ const medicalInfoPage = Page.extend({
   title: 'Medical Info',
 
   render() {
-    const details = { name: 'Norman'};
+    const details = { name: 'Norman',
+      doctor: 'Dr Joe Smith' };
     this.$el.html(this.template(details));
     return this;
   },
