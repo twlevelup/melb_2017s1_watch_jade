@@ -1,13 +1,18 @@
 const Page = require('watch_framework').Page;
 
+const template = require('../../templates/pages/medicalInfo.hbs');
+
 const medicalInfoPage = Page.extend({
 
   id: 'medicalInfo',
 
+  template,
+
   title: 'Medical Info',
 
   render() {
-    this.$el.html('<h1 style="color: red;">Medical Info</h1>');
+    const details = { name: 'Norman'};
+    this.$el.html(this.template(details));
     return this;
   },
 });
