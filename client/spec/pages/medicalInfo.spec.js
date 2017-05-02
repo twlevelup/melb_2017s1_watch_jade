@@ -6,9 +6,16 @@ let page;
 describe('The Medical Information Page', () => {
   beforeEach(() => {
     page = new MedicalInfoPage();
+    page.render();
   });
 
   it('should have a title', () => {
     expect(page.title).toBeDefined();
   });
+
+  it('should have name as Norman', () => {
+    expect(page.$el).toContainText('Norman');
+  });
+
+
 });
