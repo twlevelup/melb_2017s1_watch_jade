@@ -1,7 +1,5 @@
 const Page = require('watch_framework').Page;
 
-const ContactView = require('../views/contact');
-
 const template = require('../../templates/pages/contacts.hbs');
 
 const contactsPage = Page.extend({
@@ -60,14 +58,6 @@ const contactsPage = Page.extend({
 
     return this;
   },
-
-  createContactHTML(contact) {
-    const view = new ContactView({
-      model: contact,
-    });
-    return view.render().el;
-  },
-
 });
 
 module.exports = contactsPage;
