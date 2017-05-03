@@ -36,13 +36,28 @@ describe('The Contacts Page', () => {
       expect(page.$el).toContainHtml('<h1>Contacts</h1>');
     });
 
+    it('should render contact name title', () => {
+      page.render();
+      expect(page.$el).toContainText('Name:');
+    });
+
+    it('should should render contact relationship title', () => {
+      page.render();
+      expect(page.$el).toContainText('Relationship:');
+    });
+
+    it('should should render contact phone title number', () => {
+      page.render();
+      expect(page.$el).toContainText('Phone Number:');
+    });
+
     it('returns the view object', () => {
       expect(page.render()).toEqual(page);
     });
   });
 
-  describe('scrolling', () => {
-    it('next contact should increment the index', () => {
+  describe('scrolling through contacts', () => {
+    it('nextContact should increment the index', () => {
       expect(page.contactIndex).toEqual(0);
       page.nextContact();
       expect(page.contactIndex).toEqual(1);

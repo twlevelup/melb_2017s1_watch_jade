@@ -26,25 +26,37 @@ const contactsPage = Page.extend({
 
   contactIndex: 0,
 
+  allContacts: [
+    { name: 'Bob', relationship: 'Son', phoneNumber: '0431 318 162' },
+    { name: 'Bryan', relationship: 'Son', phoneNumber: '0430 882 244' },
+    { name: 'Carissa', relationship: 'Daughter', phoneNumber: '0412 891 475' },
+  ],
+
   previousContact() {
-    this.contactIndex -= 1;
+    if (this.contactIndex === 0) {
+      this.contactIndex = this.allContacts.length - 1;
+    } else {
+      this.contactIndex -= 1;
+    }
     this.render();
   },
 
   nextContact() {
-    this.contactIndex += 1;
+    if (this.contactIndex === this.allContacts.length - 1) {
+      this.contactIndex = 0;
+    } else {
+      this.contactIndex += 1;
+    }
     this.render();
   },
 
   render() {
-    const allContacts = [
-      { name: 'Adam', phoneNumber: '0431 111 111' },
-      { name: 'James', phoneNumber: '0431 222 222' },
-      { name: 'Marzena', phoneNumber: '0431 333 333' },
-    ];
-
-    const contact = allContacts[this.contactIndex];
-    this.$el.html(this.template({ name: contact.name, phoneNumber: contact.phoneNumber }));
+    const contact = this.allContacts[this.contactIndex];
+    this.$el.html(this.template({
+      name: contact.name,
+      relationship: contact.relationship,
+      phoneNumber: contact.phoneNumber,
+    }));
 
     return this;
   },
