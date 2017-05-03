@@ -38,25 +38,25 @@ describe('The Home Page', () => {
         expect(page.scrollDown).toHaveBeenCalled();
       });
     });
+
+    describe('face', () => {
+      it('should navigate to medical info page', () => {
+        spyOn(window.App, 'navigate');
+        page.configureButtons();
+        eventHub.trigger('face');
+        expect(window.App.navigate).toHaveBeenCalledWith('medicalInfo');
+      });
+    });
   });
 
   describe('rendering', () => {
-    it('should produce the correct HTML', () => {
-      page.render();
-      expect(page.$el).toContainText('Hello, World!');
-    });
+    // it('should produce the correct HTML', () => {
+    //   page.render();
+    //   expect(page.$el).toContainText('Hello, World!');
+    // });
 
     it('returns the view object', () => {
       expect(page.render()).toEqual(page);
-    });
-  });
-
-  describe('face', () => {
-    it('should navigate to medical info page', () => {
-      spyOn(window.App, 'navigate');
-      page.configureButtons();
-      eventHub.trigger('face');
-      expect(window.App.navigate).toHaveBeenCalledWith('medicalInfo');
     });
   });
 });
