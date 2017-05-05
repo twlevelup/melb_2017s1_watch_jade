@@ -25,9 +25,11 @@ const contactsPage = Page.extend({
   contactIndex: 0,
 
   allContacts: [
+    { name: 'Dr Joe Smith', relationship: 'Doctor', phoneNumber: '0412 891 475' },
     { name: 'Bob', relationship: 'Son', phoneNumber: '0431 318 162' },
     { name: 'Bryan', relationship: 'Son', phoneNumber: '0430 882 244' },
-    { name: 'Carissa', relationship: 'Daughter', phoneNumber: '0412 891 475' },
+    { name: 'Carissa', relationship: 'Daughter-in-law', phoneNumber: '0412 891 475' },
+    { name: 'Elaine', relationship: 'Carer', phoneNumber: '0412 431 931' },
   ],
 
   previousContact() {
