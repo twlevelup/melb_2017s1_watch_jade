@@ -1,5 +1,17 @@
-<h1 style="color: red;">Medical Info</h1>
+<h1>Medical Information</h1>
 
-<h2 style="color: pink;">{{name}}</h2>
+<div id="emergency-info">
+  <h2>Name:</h2><p>{{details.name}}</p>
 
-<h2 style="color: pink;">{{doctor}}</h2>
+  <h2>Emergency Contact:</h2>
+  <p>{{details.emergencyContact.name}}: {{details.emergencyContact.phoneNumber}}</p>
+
+  <h2>Medical Conditions:</h2>
+  <p>{{details.medicalConditions}}</p>
+
+  <h2>Allergies:</h2>
+  <p>{{details.allergies}}</p>
+
+  <h2>Blood Type:</h2>
+  <p>{{details.bloodType}}</p>
+</div>
