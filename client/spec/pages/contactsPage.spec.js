@@ -63,11 +63,22 @@ describe('The Contacts Page', () => {
       expect(page.contactIndex).toEqual(1);
     });
 
-    it('previousContact should decrement the index', () => {
+    it('should go back to 0 if user is at end of array', () => {
+      page.contactIndex = page.allContacts.length - 1;
       page.nextContact();
-      expect(page.contactIndex).toEqual(1);
+      expect(page.contactIndex).toEqual(0);
+    });
+
+    it('previousContact should decrement the index', () => {
+      page.contactIndex = 1;
       page.previousContact();
       expect(page.contactIndex).toEqual(0);
+    });
+
+    it('should go to last contact if user goes backwards from beginning of list', () => {
+      page.contactIndex = 0;
+      page.previousContact();
+      expect(page.contactIndex).toEqual(page.allContacts.length - 1);
     });
   });
 });
