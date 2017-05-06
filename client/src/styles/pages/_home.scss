@@ -9,3 +9,13 @@
 .clock-time {
   font-size: 3.8em;
 }
+
+.phonebook, .reminder {
+  height: 35px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  margin: -10px 0 50px;
+}
